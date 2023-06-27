@@ -103,14 +103,6 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
     }
   }
 
-  dynamic "admin_ssh_key" {
-    for_each = var.admin_ssh_key
-    content {
-      username   = lookup(admin_ssh_key.value, "username", null)
-      public_key = lookup(admin_ssh_key.value, "public_key", null)
-    }
-  }
-
   dynamic "identity" {
     for_each = var.identity != [] ? [var.identity] : []
     content {

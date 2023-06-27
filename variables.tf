@@ -143,9 +143,9 @@ variable "admin_username" {
   default     = "adminuser"
 }
 
-variable "admin_ssh_key" {
-  type    = list(any)
-  default = []
+variable "admin_password" {
+  description = "The password of the local administrator used for the virtual machine"
+  type        = string
 }
 
 variable "route_tables_ids" {
