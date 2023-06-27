@@ -38,10 +38,10 @@ variable "azurerm_virtual_network_name" {
   type        = string
 }
 
-variable "virtual_network_resource_group_name" {
+/* variable "virtual_network_resource_group_name" {
   description = "Name of the resource group of the virtual network"
   type        = string
-}
+} */
 
 variable "azurerm_resource_group_name" {
   description = "Name of the resource group to be imported"
@@ -143,10 +143,10 @@ variable "admin_username" {
   default     = "adminuser"
 }
 
-variable "admin_password" {
+/* variable "admin_password" {
   description = "The password of the local administrator used for the virtual machine"
   type        = string
-}
+} */
 
 variable "route_tables_ids" {
   description = "A map of subnet name for the route table ids"

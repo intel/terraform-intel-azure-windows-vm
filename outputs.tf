@@ -1,4 +1,4 @@
-output "size" {
+/* output "size" {
   description = "The SKU for the virtual machine"
   value       = azurerm_linux_virtual_machine.linux_vm.size
 }
@@ -50,4 +50,4 @@ output "identity" {
 output "storage_account_tier" {
   description = "Tier to identify the storage account associated with the virtual machine"
   value       = try(data.azurerm_storage_account.example[0].account_tier, "")
-}
+} */

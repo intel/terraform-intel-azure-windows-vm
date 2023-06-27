@@ -4,7 +4,7 @@ data "azurerm_resource_group" "rg" {
 
 data "azurerm_virtual_network" "vnet" {
   name                = var.azurerm_virtual_network_name
-  resource_group_name = var.virtual_network_resource_group_name
+  resource_group_name = data.azurerm_resource_group.rg.name
 }
 
 data "azurerm_subnet" "example" {
@@ -62,48 +62,24 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     sku       = "2019-Datacenter"
     version   = "latest"
   }
-}
+}  
 
-/* 
-
-resource "azurerm_linux_virtual_machine" "linux_vm" {
-  name                            = var.vm_name
-  resource_group_name             = var.azurerm_resource_group_name
-  location                        = data.azurerm_resource_group.rg.location
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
-  admin_password                  = var.admin_password
-  tags                            = var.tags
-  network_interface_ids           = [azurerm_network_interface.nic.id]
-  max_bid_price                   = var.priority == "Spot" ? var.max_bid_price : null
-  priority                        = var.priority
-  eviction_policy                 = var.priority == "Spot" ? var.eviction_policy : null
-  disable_password_authentication = var.disable_password_authentication
-
-  os_disk {
-    name                      = var.os_disk_name
-    caching                   = var.os_disk_caching
-    storage_account_type      = var.os_disk_storage_account_type
-    disk_size_gb              = var.disk_size_gb
-    write_accelerator_enabled = var.write_accelerator_enabled
-  } */
-
-  source_image_reference {
+  /* source_image_reference {
     publisher = var.source_image_reference_publisher
     offer     = var.source_image_reference_offer
     sku       = var.source_image_reference_sku
     version   = var.source_image_reference_version
-  }
+  } */
 
-  dynamic "boot_diagnostics" {
+  /* dynamic "boot_diagnostics" {
     for_each = var.enable_boot_diagnostics ? [1] : []
     content {
       storage_account_uri = var.azurerm_storage_account_name != null ? data.azurerm_storage_account.example.0.primary_blob_endpoint : null
 
     }
-  }
+  } */
 
-  dynamic "identity" {
+  /* dynamic "identity" {
     for_each = var.identity != [] ? [var.identity] : []
     content {
       identity_ids = lookup(identity.value, "identity_ids", null)
@@ -111,6 +87,4 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
       tenant_id    = lookup(identity.value, "tenant_id", null)
       type         = lookup(identity.value, "type", null)
     }
-  }
-}
-
+  } */
