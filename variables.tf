@@ -68,9 +68,9 @@ variable "os_disk_name" {
 }
 
 variable "vm_name" {
-  description = "The unique name of the Linux virtual machine"
+  description = "The unique name of the Windows virtual machine"
   type        = string
-  default     = "vm1"
+  default     = "windows_vm"
 }
 
 variable "os_disk_caching" {
