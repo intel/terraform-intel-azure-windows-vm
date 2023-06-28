@@ -9,7 +9,6 @@
 # See more:
 # https://learn.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series
 # https://learn.microsoft.com/en-us/azure/virtual-machines/ev5-esv5-series
-# https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing
 
 variable "virtual_machine_size" {
   description = "The SKU that will be configured for the provisioned virtual machine"
@@ -17,11 +16,9 @@ variable "virtual_machine_size" {
   default     = "Standard_D2s_v5"
 }
 
-
 ########################
 ####    Required    ####
 ########################
-
 
 variable "admin_password" {
   description = "The Password which should be used for the local-administrator on this virtual machine"
@@ -37,11 +34,6 @@ variable "azurerm_virtual_network_name" {
   description = "Name of the preconfigured virtual network"
   type        = string
 }
-
-/* variable "virtual_network_resource_group_name" {
-  description = "Name of the resource group of the virtual network"
-  type        = string
-} */
 
 variable "azurerm_resource_group_name" {
   description = "Name of the resource group to be imported"
@@ -143,17 +135,11 @@ variable "admin_username" {
   default     = "adminuser"
 }
 
-/* variable "admin_password" {
-  description = "The password of the local administrator used for the virtual machine"
-  type        = string
-} */
-
 variable "route_tables_ids" {
   description = "A map of subnet name for the route table ids"
   type        = map(string)
   default     = {}
 }
-
 
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
@@ -212,4 +198,3 @@ variable "enable_boot_diagnostics" {
   type        = bool
   default     = true
 }
-

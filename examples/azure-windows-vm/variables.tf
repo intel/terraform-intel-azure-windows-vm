@@ -9,7 +9,6 @@
 # See more:
 # https://learn.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series
 # https://learn.microsoft.com/en-us/azure/virtual-machines/ev5-esv5-series
-# https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing
 
 variable "virtual_machine_size" {
   description = "The SKU that will be configured for the provisioned virtual machine"
@@ -17,22 +16,19 @@ variable "virtual_machine_size" {
   default     = "Standard_D2s_v5"
 }
 
-
 ########################
 ####    Required    ####
 ########################
 variable "prefix" {
-  description = "prefix stuff for whatever"
+  description = "landing zone usage - testing, qa, prod"
   type = string
   default = "testing"
-
 }
 
 variable "location" {
-  description = "availability zone where the instance will land"
+  description = "region where the instance will land"
   type = string
   default = "West US 2"
-
 }
 
 variable "admin_password" {
@@ -49,14 +45,8 @@ variable "admin_password" {
 variable "azurerm_virtual_network_name" {
   description = "Name of the preconfigured virtual network"
   type        = string
-    default     = "booga"
-}
-
-/* variable "virtual_network_resource_group_name" {
-  description = "Name of the resource group of the virtual network"
-  type        = string
   default     = "booga"
-} */
+}
 
 variable "resource_group_name" {
   description = "Name of the resource group to be imported"

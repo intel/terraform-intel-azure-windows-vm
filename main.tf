@@ -1,3 +1,5 @@
+##  This tf file is structured with data up top and resources below.  
+
 data "azurerm_resource_group" "rg" {
   name = var.azurerm_resource_group_name
 }
@@ -63,28 +65,3 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     version   = "latest"
   }
 }  
-
-  /* source_image_reference {
-    publisher = var.source_image_reference_publisher
-    offer     = var.source_image_reference_offer
-    sku       = var.source_image_reference_sku
-    version   = var.source_image_reference_version
-  } */
-
-  /* dynamic "boot_diagnostics" {
-    for_each = var.enable_boot_diagnostics ? [1] : []
-    content {
-      storage_account_uri = var.azurerm_storage_account_name != null ? data.azurerm_storage_account.example.0.primary_blob_endpoint : null
-
-    }
-  } */
-
-  /* dynamic "identity" {
-    for_each = var.identity != [] ? [var.identity] : []
-    content {
-      identity_ids = lookup(identity.value, "identity_ids", null)
-      principal_id = lookup(identity.value, "principal_id", null)
-      tenant_id    = lookup(identity.value, "tenant_id", null)
-      type         = lookup(identity.value, "type", null)
-    }
-  } */

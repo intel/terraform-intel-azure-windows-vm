@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/intel/terraform-intel-azure-linux-vm/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
 # Intel® Cloud Optimization Modules for Terraform
@@ -8,16 +8,16 @@
 
 ## Module name
 
-Azure Linux Virtual Machine
+Azure Windows Virtual Machine
 
-## Terraform Intel Azure VM - Linux VM
-This example creates an Azure Virtual Machine on Intel Icelake CPU on Linux Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by default.
+## Terraform Intel Azure VM - Windows VM
+This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by default.
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
 
 ## Usage
 
-See examples folder for code ./examples/azure-linux-vm-spot-vm/main.tf
+See examples folder for code ./examples/azure-windows-vm/main.tf
 
 Example of main.tf
 
