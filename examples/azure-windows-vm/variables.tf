@@ -21,14 +21,14 @@ variable "virtual_machine_size" {
 ########################
 variable "prefix" {
   description = "landing zone usage - testing, qa, prod"
-  type = string
-  default = "testing"
+  type        = string
+  default     = "testing"
 }
 
 variable "location" {
   description = "region where the instance will land"
-  type = string
-  default = "West US 2"
+  type        = string
+  default     = "West US 2"
 }
 
 variable "admin_password" {

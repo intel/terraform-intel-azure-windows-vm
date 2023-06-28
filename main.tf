@@ -42,11 +42,11 @@ resource "azurerm_network_interface" "nic" {
 resource "azurerm_windows_virtual_machine" "windows_vm" {
   name                = var.vm_name
   location            = data.azurerm_resource_group.rg.location
-  resource_group_name             = var.azurerm_resource_group_name
-  size                            = var.virtual_machine_size
-  admin_username                  = var.admin_username
-  admin_password                  = var.admin_password
-  tags                            = var.tags
+  resource_group_name = var.azurerm_resource_group_name
+  size                = var.virtual_machine_size
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
+  tags                = var.tags
 
   network_interface_ids = [azurerm_network_interface.nic.id]
 
@@ -57,7 +57,7 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     disk_size_gb              = var.disk_size_gb
     write_accelerator_enabled = var.write_accelerator_enabled
   }
-  
+
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
