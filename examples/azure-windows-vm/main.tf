@@ -31,13 +31,13 @@ resource "azurerm_network_interface" "example" {
 
 module "azure-windows-vm" {
     source = "../../"
-    admin_password                  = "Intel01!@#$"
+    admin_password                  = var.admin_password
     /* virtual_network_resource_group_name = virtual_network_resource_group_name.example.name */
     azurerm_resource_group_name = azurerm_resource_group.example.name
     azurerm_subnet_name = azurerm_subnet.example.name
     azurerm_virtual_network_name = azurerm_virtual_network.example.name
     tags = {
-        owner   = "notjosh",
+        owner   = "owner_josh",
         duration = "5"
   }
     depends_on = [azurerm_resource_group.example]

@@ -6,7 +6,7 @@
 
 © Copyright 2022, Intel Corporation
 
-## Module name
+## Azure Windows Virtual Machine
 
 Azure Windows Virtual Machine
 

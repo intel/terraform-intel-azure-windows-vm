@@ -39,7 +39,6 @@ variable "admin_password" {
     condition     = length(var.admin_password) >= 8
     error_message = "The admin_password value must be at least 8 characters in length"
   }
-  default = "Intel01!@#$"
 }
 
 variable "azurerm_virtual_network_name" {
