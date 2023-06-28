@@ -44,17 +44,17 @@ variable "admin_password" {
 variable "azurerm_virtual_network_name" {
   description = "Name of the preconfigured virtual network"
   type        = string
-  default     = "booga"
+  default     = "virtual_network_test"
 }
 
 variable "resource_group_name" {
   description = "Name of the resource group to be imported"
   type        = string
-  default     = "booga"
+  default     = "resoure_group_test"
 }
 
 variable "azurerm_subnet_name" {
   description = "The name of the preconfigured subnet"
   type        = string
-  default     = "booga"
+  default     = "subnet_test"
 }
