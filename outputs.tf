@@ -1,3 +1,28 @@
+output "vm_id" {
+  description = "The ID of the deployed virtual machine"
+  value       = azurerm_virtual_machine.windows_vm.id
+}
+
+output "vm_name" {
+  description = "The name of the deployed virtual machine"
+  value       = azurerm_virtual_machine.windows_vm.name
+}
+
+output "vm_ip_address" {
+  description = "The public IP address of the deployed virtual machine"
+  value       = azurerm_virtual_machine.windows_vm.public_ip_address
+}
+
+output "vm_username" {
+  description = "The username for accessing the deployed virtual machine"
+  value       = var.admin_username
+}
+
+output "vm_password" {
+  description = "The password for accessing the deployed virtual machine"
+  value       = var.admin_password
+}
+
 /* output "size" {
   description = "The SKU for the virtual machine"
   value       = azurerm_linux_virtual_machine.linux_vm.size
