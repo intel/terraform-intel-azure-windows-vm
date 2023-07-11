@@ -28,14 +28,6 @@ variables.tf
 ####     Intel      ####
 ########################
 
-# See policies.md, we recommend  Intel Xeon 3rd Generation Scalable processors (code-named Ice Lake)
-# Storage Optimized: Standard_L8s_v3, Standard_L16s_v3, Standard_L32s_v3, Standard_L48s_v3, Standard_L64s_v3, Standard_L80s_v3, 
-# General Purpose: Standard_D2_v5, Standard_D4_v5, Standard_D8_v5, Standard_D16_v5, Standard_D32_v5, Standard_D48_v5, Standard_D64_v5, Standard_D96_v5, Standard_D2d_v5, Standard_D4d_v5, Standard_D8d_v5, Standard_D16d_v5, Standard_D32d_v5, Standard_D48d_v5, Standard_D64d_v5, Standard_D96d_v5, Standard_D2ds_v5, Standard_D4ds_v5, Standard_D8ds_v5, Standard_D16ds_v5, Standard_D32ds_v5, Standard_D48ds_v5, Standard_D64ds_v5, Standard_D96ds_v5
-# Memory Optimized: Standard_E2_v5, Standard_E4_v5, Standard_E8_v5, Standard_E16_v5, Standard_E20_v5, Standard_E32_v5, Standard_E48_v5, Standard_E64_v5, Standard_E96_v5, Standard_E104i_v5, Standard_E2bs_v5, Standard_E4bs_v5, Standard_E8bs_v5, Standard_E16bs_v5, Standard_E32bs_v5, Standard_E48bs_v5, Standard_E64bs_v5, Standard_E2bds_v5, Standard_E4bds_v5, Standard_E8bds_v5, Standard_E16bds_v5, Standard_E32bds_v5, Standard_E48bds_v5, Standard_E64bds_v5
-# See more:
-# https://learn.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series
-# https://learn.microsoft.com/en-us/azure/virtual-machines/ev5-esv5-series
-
 variable "virtual_machine_size" {
   description = "The SKU that will be configured for the provisioned virtual machine"
   type        = string
@@ -57,68 +49,10 @@ variable "location" {
   default     = "West US 2"
 }
 
-variable "admin_password" {
-  description = "The Password which should be used for the local-administrator on this virtual machine"
-  type        = string
-  sensitive   = true
-  validation {
-    condition     = length(var.admin_password) >= 8
-    error_message = "The admin_password value must be at least 8 characters in length"
-  }
-}
-
-variable "azurerm_virtual_network_name" {
-  description = "Name of the preconfigured virtual network"
-  type        = string
-  default     = "virtual_network_test"
-}
-
-variable "resource_group_name" {
-  description = "Name of the resource group to be imported"
-  type        = string
-  default     = "resoure_group_test"
-}
-
-variable "azurerm_subnet_name" {
-  description = "The name of the preconfigured subnet"
-  type        = string
-  default     = "subnet_test"
-}
-
 ```
 
 main.tf
 ```hcl
-resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
-  location = var.location
-}
-
-resource "azurerm_virtual_network" "example" {
-  name                = "${var.prefix}-vnet"
-  address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-}
-
-resource "azurerm_subnet" "example" {
-  name                 = "${var.prefix}-subnet"
-  resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example.name
-  address_prefixes     = ["10.0.1.0/24"]
-}
-
-resource "azurerm_network_interface" "example" {
-  name                = "${var.prefix}-nic"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-
-  ip_configuration {
-    name                          = "${var.prefix}-nic-config"
-    subnet_id                     = azurerm_subnet.example.id
-    private_ip_address_allocation = "Dynamic"
-  }
-}
 
 module "azure-windows-vm" {
   source                       = "../../"
@@ -132,7 +66,6 @@ module "azure-windows-vm" {
   }
   depends_on = [azurerm_resource_group.example]
 }
-
 
 
 ```
