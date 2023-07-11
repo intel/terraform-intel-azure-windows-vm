@@ -13,6 +13,13 @@ This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Op
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
 
+Create a terraform.tfvars file and paste in   ## finish this... ** 
+
+  azurerm_resource_group_name = "shreejan_test_mssql"
+  azurerm_subnet_name = "dbx-public"
+  azurerm_virtual_network_name = "mssql_vnet_test"
+
+// TODO - finish out the section above for terraform.tfvars section 
 Example of main.tf
 
 ```hcl
@@ -22,7 +29,7 @@ Example of main.tf
 ```
 # Provision Intel Cloud Optimization Module
 
-variables.tf
+variables.tf // TODO - update this section with updated variables
 ```hcl
 variable "virtual_machine_size" {
   description = "The SKU that will be configured for the provisioned virtual machine"

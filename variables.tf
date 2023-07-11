@@ -70,7 +70,7 @@ variable "os_disk_name" {
 variable "vm_name" {
   description = "The unique name of the Windows virtual machine"
   type        = string
-  default     = "windows_vm"
+  default     = "windows-vm"
 }
 
 variable "os_disk_caching" {
@@ -88,19 +88,19 @@ variable "os_disk_storage_account_type" {
 variable "source_image_reference_offer" {
   description = " Specifies the offer of the image used to create the virtual machine"
   type        = string
-  default     = "0001-com-ubuntu-server-jammy"
+  default     = "WindowsServer"
 }
 
 variable "source_image_reference_sku" {
   description = "Specifies the SKU of the image used to create the virtual machine"
   type        = string
-  default     = "22_04-lts-gen2"
+  default     = "2022-Datacenter"
 }
 
 variable "source_image_reference_publisher" {
   description = "Specifies the publisher of the image used to create the virtual machine"
   type        = string
-  default     = "Canonical"
+  default     = "MicrosoftWindowsServer"
 }
 
 variable "source_image_reference_version" {
@@ -148,16 +148,6 @@ variable "tags" {
   }
 }
 
-variable "identity" {
-  type = object({
-    identity_ids = optional(list(string))
-    principal_id = optional(string)
-    tentant_id   = optional(string)
-    type         = optional(string, "SystemAssigned")
-  })
-  default = {}
-}
-
 variable "write_accelerator_enabled" {
   description = "Should write accelerator be enabled for this OS disk? Defaults to false"
   type        = bool
@@ -174,27 +164,4 @@ variable "priority" {
   description = "Specifies the priority of this virtual machine. Possible values are Regular and Spot. Defaults to Regular"
   type        = string
   default     = "Regular"
-}
-
-variable "eviction_policy" {
-  description = "Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. Possible values are Deallocate and Delete"
-  type        = string
-  default     = "Deallocate"
-}
-
-variable "max_bid_price" {
-  description = "The maximum price you're willing to pay for this virtual machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the virtual machine will be evicted using the eviction_policy"
-  default     = "-1"
-}
-
-variable "disable_password_authentication" {
-  description = "Boolean that determines if password authentication will be disabled on this virtual machine"
-  type        = bool
-  default     = false
-}
-
-variable "enable_boot_diagnostics" {
-  description = "Boolean that determines if the boot diagnostics will be enabled on this virtual machine"
-  type        = bool
-  default     = true
 }

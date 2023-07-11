@@ -36,7 +36,7 @@ module "azure-windows-vm" {
   azurerm_subnet_name          = azurerm_subnet.example.name
   azurerm_virtual_network_name = azurerm_virtual_network.example.name
   tags = {
-    owner    = "owner_josh",
+    owner    = "owner_name",
     duration = "5"
   }
   depends_on = [azurerm_resource_group.example]
