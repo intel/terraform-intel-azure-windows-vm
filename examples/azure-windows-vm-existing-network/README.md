@@ -13,11 +13,11 @@ This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Op
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
 
-Create a terraform.tfvars file and paste in   ## finish this... ** 
+Create a terraform.tfvars file and COPY in the following data fields 
 
-  azurerm_resource_group_name = "shreejan_test_mssql"
-  azurerm_subnet_name = "dbx-public"
-  azurerm_virtual_network_name = "mssql_vnet_test"
+  azurerm_resource_group_name = "enter resource group name here"
+  azurerm_subnet_name = "enter subnet name here"
+  azurerm_virtual_network_name = "enter virtual network name here"
 
 // TODO - finish out the section above for terraform.tfvars section 
 Example of main.tf
