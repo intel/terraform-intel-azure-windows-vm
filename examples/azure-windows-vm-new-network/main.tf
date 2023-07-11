@@ -1,3 +1,7 @@
+# Example of how to pass variable for virtual machine password:
+# terraform apply -var="admin_password=..."
+# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+
 resource "azurerm_resource_group" "example" {
   name     = var.resource_group_name
   location = var.location
@@ -31,6 +35,7 @@ resource "azurerm_network_interface" "example" {
 
 module "azure-windows-vm" {
   source                       = "../../"
+  #source                       = "intel/azure-windows-vm/intel"
   admin_password               = var.admin_password
   azurerm_resource_group_name  = azurerm_resource_group.example.name
   azurerm_subnet_name          = azurerm_subnet.example.name
