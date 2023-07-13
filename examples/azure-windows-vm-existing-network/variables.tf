@@ -1,22 +1,4 @@
 ########################
-####     Intel      ####
-########################
-
-# See policies.md, we recommend  Intel Xeon 3rd Generation Scalable processors (code-named Ice Lake)
-# Storage Optimized: Standard_L8s_v3, Standard_L16s_v3, Standard_L32s_v3, Standard_L48s_v3, Standard_L64s_v3, Standard_L80s_v3, 
-# General Purpose: Standard_D2_v5, Standard_D4_v5, Standard_D8_v5, Standard_D16_v5, Standard_D32_v5, Standard_D48_v5, Standard_D64_v5, Standard_D96_v5, Standard_D2d_v5, Standard_D4d_v5, Standard_D8d_v5, Standard_D16d_v5, Standard_D32d_v5, Standard_D48d_v5, Standard_D64d_v5, Standard_D96d_v5, Standard_D2ds_v5, Standard_D4ds_v5, Standard_D8ds_v5, Standard_D16ds_v5, Standard_D32ds_v5, Standard_D48ds_v5, Standard_D64ds_v5, Standard_D96ds_v5
-# Memory Optimized: Standard_E2_v5, Standard_E4_v5, Standard_E8_v5, Standard_E16_v5, Standard_E20_v5, Standard_E32_v5, Standard_E48_v5, Standard_E64_v5, Standard_E96_v5, Standard_E104i_v5, Standard_E2bs_v5, Standard_E4bs_v5, Standard_E8bs_v5, Standard_E16bs_v5, Standard_E32bs_v5, Standard_E48bs_v5, Standard_E64bs_v5, Standard_E2bds_v5, Standard_E4bds_v5, Standard_E8bds_v5, Standard_E16bds_v5, Standard_E32bds_v5, Standard_E48bds_v5, Standard_E64bds_v5
-# See more:
-# https://learn.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series
-# https://learn.microsoft.com/en-us/azure/virtual-machines/ev5-esv5-series
-
-variable "virtual_machine_size" {
-  description = "The SKU that will be configured for the provisioned virtual machine"
-  type        = string
-  default     = "Standard_D2s_v5"
-}
-
-########################
 ####    Required    ####
 ########################
 variable "prefix" {

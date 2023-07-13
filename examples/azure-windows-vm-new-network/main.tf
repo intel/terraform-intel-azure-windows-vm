@@ -34,8 +34,8 @@ resource "azurerm_network_interface" "example" {
 }
 
 module "azure-windows-vm" {
-  source                       = "../../"
-  #source                       = "intel/azure-windows-vm/intel"
+  
+  source                       = "intel/azure-windows-vm/intel"
   admin_password               = var.admin_password
   azurerm_resource_group_name  = azurerm_resource_group.example.name
   azurerm_subnet_name          = azurerm_subnet.example.name

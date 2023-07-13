@@ -62,6 +62,6 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     publisher = var.source_image_reference_publisher
     offer     = var.source_image_reference_offer
     sku       = var.source_image_reference_sku
-    version   = var.source_image_referenvce_version
+    version   = var.source_image_reference_version
   }
 }  
