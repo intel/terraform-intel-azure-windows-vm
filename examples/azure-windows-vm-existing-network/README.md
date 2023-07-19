@@ -13,44 +13,20 @@ This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Op
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
 
-Create a terraform.tfvars file and COPY in the following data fields 
+This examples shows how to use Intel OCM to deploy a Azure Windows VM in your exisiting network infrastructure
 
-  azurerm_resource_group_name = "enter resource group name here"
-  azurerm_subnet_name = "enter subnet name here"
-  azurerm_virtual_network_name = "enter virtual network name here"
-
-// TODO - finish out the section above for terraform.tfvars section 
-Example of main.tf
-
-```hcl
-# Example of how to pass variable for virtual machine password:
-# terraform apply -var="admin_password=..."
-# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+There are four required variables are necessary to deploy a Azure Windows VM
+```
+admin_password
+azurerm_resource_group
+azurerm_subnet_name
+azurerm_virtual_network_name
 ```
 # Provision Intel Cloud Optimization Module
+Variables.tf
 
-variables.tf // TODO - update this section with updated variables
-```hcl
-variable "virtual_machine_size" {
-  description = "The SKU that will be configured for the provisioned virtual machine"
-  type        = string
-  default     = "Standard_D2s_v5"
-}
-
-########################
-####    Required    ####
-########################
-variable "prefix" {
-  description = "landing zone usage - testing, qa, prod"
-  type        = string
-  default     = "testing"
-}
-
-variable "location" {
-  description = "region where the instance will land"
-  type        = string
-  default     = "West US 2"
-}
+ ```hcl
+ # THESE ARE REQUIRED VARIABLES THAT THE USERS NEED TO PROVIDE IN ORDER TO DELOY AN AZURE WINDOWS VM
 
 variable "admin_password" {
   description = "The Password which should be used for the local-administrator on this virtual machine"
@@ -61,43 +37,21 @@ variable "admin_password" {
     error_message = "The admin_password value must be at least 8 characters in length"
   }
 }
-
-variable "azurerm_virtual_network_name" {
-  description = "Name of the preconfigured virtual network"
-  type        = string
-  default     = "virtual_network_test"
-}
-
-variable "resource_group_name" {
-  description = "Name of the resource group to be imported"
-  type        = string
-  default     = "resoure_group_test"
-}
-
-variable "azurerm_subnet_name" {
-  description = "The name of the preconfigured subnet"
-  type        = string
-  default     = "subnet_test"
-}
-
 ```
 
 main.tf
 ```hcl
-
 module "azure-windows-vm" {
-  source                       = "../../"
+  source                       = "intel/azure-windows-vm/intel"
   admin_password               = var.admin_password
-  azurerm_resource_group_name  = azurerm_resource_group.example.name
-  azurerm_subnet_name          = azurerm_subnet.example.name
-  azurerm_virtual_network_name = azurerm_virtual_network.example.name
+  azurerm_resource_group_name  = <"ENTER YOUR RESOURCE GROUP NAME">
+  azurerm_subnet_name          = <"ENTER YOUR SUBNET NAME">
+  azurerm_virtual_network_name = <"ENTER YOUR VIRTUAL NETWORK NAME">
   tags = {
-    owner    = "owner_josh",
+    owner    = "owner",
     duration = "5"
   }
-  depends_on = [azurerm_resource_group.example]
 }
-
 ```
 
 
@@ -107,6 +61,11 @@ Run Terraform
 terraform init  
 terraform plan
 terraform apply
+```
+```hcl
+# Example of how to pass variable for virtual machine password:
+# terraform apply -var="admin_password=..."
+# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
 ```
 
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.

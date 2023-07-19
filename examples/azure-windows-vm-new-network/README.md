@@ -13,37 +13,42 @@ Azure Windows Virtual Machine
 ## Terraform Intel Azure VM - Windows VM
 This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2s_v5 by default.
 
-As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a newly configured network interface, subnet, and resource group and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
+As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a **newly configured network interface, subnet, and resource group** and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
 
 ## Usage
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
 
-Example of main.tf
 
-```hcl
-# Example of how to pass variable for virtual machine password:
-# terraform apply -var="admin_password=..."
-# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
-```
 # Provision Intel Cloud Optimization Module
 
 variables.tf
 ```hcl
 variable "admin_password" {
+  description = "The Password which should be used for the local-administrator on this virtual machine"
   type        = string
-  default     = null
   sensitive   = true
+  validation {
+    condition     = length(var.admin_password) >= 8
+    error_message = "The admin_password value must be at least 8 characters in length"
+  }
 }
 ```
 
 main.tf
+
+**NOTE:** Locals block is where you can change the **name and location** of the resource group being created for  the Azure Windows VM
 ```hcl
+locals{
+  resource_group_name = "resource-group-test"
+  location            = "West US 2"
+}
+
 # Creation of Azure Resource Group, network interface, subnet
 
 resource "azurerm_resource_group" "example" {
-  name     = var.resource_group_name
-  location = var.location
+  name     = local.resource_group_name
+  location = local.location
 }
 
 resource "azurerm_virtual_network" "example" {
@@ -98,6 +103,11 @@ Run Terraform
 terraform init  
 terraform plan
 terraform apply
+```
+```hcl
+# Example of how to pass variable for virtual machine password:
+# terraform apply -var="admin_password=..."
+# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
 ```
 
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.

@@ -48,6 +48,17 @@ variable "azurerm_subnet_name" {
 ########################
 ####     Other      ####
 ########################
+variable "prefix" {
+  description = "landing zone usage - testing, qa, prod"
+  type        = string
+  default     = "testing"
+}
+
+variable "location" {
+  description = "region where the instance will land"
+  type        = string
+  default     = "West US 2"
+}
 
 variable "azurerm_network_interface_name" {
   description = "The name of the network interface. Changing this forces a new resource to be created"
