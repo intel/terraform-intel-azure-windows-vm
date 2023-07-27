@@ -64,4 +64,12 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
     sku       = var.source_image_reference_sku
     version   = var.source_image_reference_version
   }
+
+  lifecycle {
+    ignore_changes = [
+      # Ignore changes to tags, e.g. because a management agent
+      # updates these based on some ruleset managed elsewhere.
+      identity,
+    ]
+  }
 }  
