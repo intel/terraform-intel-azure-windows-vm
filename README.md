@@ -88,7 +88,6 @@ Note that this example may create resources. Run `terraform destroy` when you do
 ## Considerations  
 - Using HashiCorp Modules alongside green-blue deployment allows for a secure and efficient deployment process. The modules can be easily integrated into both the active and inactive environments, ensuring consistency across both environments.
    - Instance - If you apply the instances will shut down immediately and restart, creating service interruption.
-   - 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
