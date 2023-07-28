@@ -20,7 +20,7 @@ As you configure your application's environment, choose the configurations for y
 <center>
 
 #### Find all the information below plus even more by navigating our full library
-#### [INTEL CLOUD PERFORMANCE DATA LIBRARY for AWS](https://www.intel.com/content/www/us/en/developer/topic-technology/cloud/library.html?f:@stm_10381_en=%5BAmazon%20Web%20Services%5D)
+#### [INTEL CLOUD PERFORMANCE DATA LIBRARY for Azure](https://www.intel.com/content/www/us/en/developer/topic-technology/cloud/library.html?q=azure&s=Relevancy)
 
 #
 
