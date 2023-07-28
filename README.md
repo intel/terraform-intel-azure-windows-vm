@@ -15,6 +15,29 @@ This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Op
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
 
+## Performance Data 
+
+<center>
+
+#### Find all the information below plus even more by navigating our full library
+#### [INTEL CLOUD PERFORMANCE DATA LIBRARY for AWS](https://www.intel.com/content/www/us/en/developer/topic-technology/cloud/library.html?f:@stm_10381_en=%5BAmazon%20Web%20Services%5D)
+
+#
+
+#### [Handle up to 1.53x as Many WordPress Users on Microsoft® Azure®  Ddsv5 Virtual Machines as on Ddsv4 VMs](https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html">
+  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-wordpress.jpg?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+
+#
+
+</center>
+
+
 ## Usage
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
@@ -63,17 +86,9 @@ terraform apply
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
 
 ## Considerations  
-
-```hcl
-
-When admin_password is specified disable_password_authentication must be set to false.
-
-Either admin_password or admin_ssh_key must be specified.
-
-The virtual machine is using a preconfigured network interface, subnet, and resource group.
-
-```
-
+- Using HashiCorp Modules alongside green-blue deployment allows for a secure and efficient deployment process. The modules can be easily integrated into both the active and inactive environments, ensuring consistency across both environments.
+   - Instance - If you apply the instances will shut down immediately and restart, creating service interruption.
+   - 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
