@@ -28,7 +28,7 @@ As you configure your application's environment, choose the configurations for y
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-wordpress.jpg?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-wordpress.JPG?raw=true" alt="Link" width="600"/>
   </a>
 </p>
 
@@ -39,7 +39,7 @@ As you configure your application's environment, choose the configurations for y
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/780282/to-complete-artificial-intelligence-workloads-faster-choose-microsoft-azure-edsv5-series-vms-featuring-3rd-gen-intel-xeon-scalable-processors.html">
-  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-ai.jpg?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ai.jpg?raw=true" alt="Link" width="600"/>
   </a>
 </p>
 
@@ -50,7 +50,7 @@ As you configure your application's environment, choose the configurations for y
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/756595/intel-azure-proof-points-better-asp-net-performance-on-3rd-gen-intel-xeon-instances.html">
-  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-asp.jpg?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-asp.jpg?raw=true" alt="Link" width="600"/>
   </a>
 </p>
 
@@ -61,7 +61,7 @@ As you configure your application's environment, choose the configurations for y
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/754003/process-up-to-35-more-mysql-new-orders-per-minute-on-microsoft-azure-mvs-featuring-3rd-gen-intel-xeon-scalable-processors-with-16-vcpus.html">
-  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-mysql.jpg?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mysql.JPG?raw=true" alt="Link" width="600"/>
   </a>
 </p>
 
@@ -73,7 +73,7 @@ As you configure your application's environment, choose the configurations for y
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/755218/boost-mariadb-performance-by-up-to-1-40x-with-microsoft-azure-edsv5-virtual-machines-vs-edsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-aws-vm/blob/main/images/azure-vm-mariadb.jpg?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mariadb.JPG?raw=true" alt="Link" width="600"/>
   </a>
 </p>
 
