@@ -11,16 +11,15 @@
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ico.png?raw=true" alt="Intel + Densify Logo" width="250"/>
 </p>
 
-This example creates an Azure  Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by default.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Densify.
+This example creates an Azure  Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by as ea example recommendaiton by Intel Cloud Optimzer (ICO) by Densify.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Densify.
 
 Intel® Cloud Optimizer is a collaboration between Densify and Intel targeted at getting you the most from your cloud investment. 
 
 Intel Cloud Optimizer by Densify helps customers optimize their cloud investments and ensure optimal performance for every workload.
 
-Using this example requires a "densify_recommndations.auto.tfvars" file. You are expected to generate this file so this is a sample file only. 
-
 Intel Cloud Optimizer by Densify is a commercial product. With Intel® Cloud Optimizer, Intel funds the use of Densify for qualifying enterprises for 12 months. For full details of the Intel Cloud Optimizer by Densify offer please see: [INTEL CLOUD OPTIMIZER by DENSIFY](https://www.densify.com/product/intel/)
 
+Using this example requires a "densify_recommndations.auto.tfvars" file. You are expected to generate this file so this is a sample file only. 
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements.
 
