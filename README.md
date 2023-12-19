@@ -21,7 +21,7 @@ In this example, the virtual machine is using a preconfigured network interface,
 
 The tags Name, Owner and Duration are added to the virtual machine when it is created.
 
-We have now included example for provisioning Intel Confidential VMs with TDX- see "azure-linux-tdx-vm" example folder.
+We have now included example for provisioning Intel Confidential VMs with TDX- see "azure-windows-tdx-vm-existing-network" example folder.
 
 ## Performance Data 
 
