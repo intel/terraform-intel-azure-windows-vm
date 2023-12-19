@@ -11,3 +11,8 @@ variable "admin_password" {
   }
 }
 
+variable "tdxzone" {
+  description = "Select the zone supporting Intel Confidential Compute VMs with TDX"
+  type        = number  
+  default     = 3
+}

@@ -45,6 +45,39 @@ variable "azurerm_subnet_name" {
   type        = string
 }
 
+##########################################################
+####     Intel Confidential VM with TDX Variable      ####
+##########################################################
+
+variable "tdx_flag" {
+  description = "Determines whether a VM is TDX Confidential Compute VM"
+  type        = bool
+  default     = false
+}
+
+variable "secure_boot_flag" {
+  description = "Enables Secure Boot- recommended TDX Confidential Compute VM"
+  type        = bool
+  default     = false
+}
+
+variable "encryption_at_host_flag" {
+  description = "Enables OS Disk Encryption at Host - recommended for TDX Confidential Compute VM"
+  type        = bool
+  default     = false
+}
+
+variable "tdxzone_flag" {
+  description = "Select the zone supporting Intel Confidential Compute VMs with TDX"
+  type        = bool
+  default     = null
+}
+
+variable "tdxzone" {
+  description = "Select the zone supporting Intel Confidential Compute VMs with TDX"
+  type        = number  
+  default     = null
+}
 ########################
 ####     Other      ####
 ########################

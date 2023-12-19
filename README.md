@@ -11,9 +11,17 @@
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2s_v5 by default.
+This example creates an Azure Virtual Machine on Intel Icelake CPU (for Intel Non-TDX VMs) and Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX) on Windows Operating System. 
 
-As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
+The virtual machine is created on an Intel Icelake Standard_D2_v5 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5.
+
+As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. 
+
+In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group. 
+
+The tags Name, Owner and Duration are added to the virtual machine when it is created.
+
+We have now included example for provisioning Intel Confidential VMs with TDX- see "azure-linux-tdx-vm" example folder.
 
 ## Performance Data 
 
