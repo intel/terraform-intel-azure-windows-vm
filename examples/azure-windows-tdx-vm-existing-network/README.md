@@ -6,124 +6,88 @@
 
 © Copyright 2022, Intel Corporation
 
-## Azure Windows Virtual Machine
+## Terraform Intel Azure Windows TDX VM
+This example creates an Azure Virtual Machine on Intel® 4th Generation Xeon® Scalable Sapphire Rapids, processors featuring Intel Trusted Domain Extensions (TDX) on Windows VM. Thse TDX Intel Confidential Computing VMs are hardned from the cloud virtualized environment by denying the hypervisor, other host management code and administrators access to the VM memory and state. 
+The virtual machine is created on Intel Sapphire Rapids n Standard_DC2es_v5 by default.
 
-Azure Windows Virtual Machine
 
-## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel Icelake CPU (for Intel Non-TDX VMs) and Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX) on Windows Operating System. 
+Supported Intel Confidential Computing VMs with Intel TDX include:
+-DCesv5-series
+-DCedsv5-series
+-ECesv5-series
+-ECedsv5-series
 
-The virtual machine is created on an Intel Icelake Standard_D2_v5 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5.
+See root policies.md for full list of Intel Confidential VMs with TDX.
+
+Azure VM Security Type will be set to Confidential and Virtualized Trusted Platform Module (vTPM) enabled as requried with optional Secure Boot, OS disk encrypted at host.
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. 
 
-In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group. 
+In this example, the virtual machine is using a preconfigured network interface, subnet, and resource group. Make sure the location of the resource group is in a region where Intel Confidential Comput VMs with TDX is supported. 
 
 The tags Name, Owner and Duration are added to the virtual machine when it is created.
-
-We have now included example for provisioning Intel Confidential VMs with TDX- see "azure-windows-tdx-vm-existing-network" example folder.
-
-## Performance Data 
-
-<center>
-
-#### Find all the information below plus even more by navigating our full library
-#### [INTEL CLOUD PERFORMANCE DATA LIBRARY for Azure](https://www.intel.com/content/www/us/en/developer/topic-technology/cloud/library.html?q=azure&s=Relevancy)
-
-#
-
-#### [Handle up to 1.53x as Many WordPress Users on Microsoft® Azure®  Ddsv5 Virtual Machines as on Ddsv4 VMs](https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-wordpress.JPG?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-#### [To Complete Artificial Intelligence Workloads Faster, Choose Microsoft Azure Edsv5-Series VMs Featuring 3rd Gen Intel® Xeon® Scalable Processors](https://www.intel.com/content/www/us/en/content-details/780282/to-complete-artificial-intelligence-workloads-faster-choose-microsoft-azure-edsv5-series-vms-featuring-3rd-gen-intel-xeon-scalable-processors.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/780282/to-complete-artificial-intelligence-workloads-faster-choose-microsoft-azure-edsv5-series-vms-featuring-3rd-gen-intel-xeon-scalable-processors.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ai.jpg?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-#### [Handle up to 69 Percent More ASP.NET Work on Microsoft® Azure® Dsv5 Virtual Machines Featuring 3rd Gen Intel®  Xeon® Scalable Processors](https://www.intel.com/content/www/us/en/content-details/756595/intel-azure-proof-points-better-asp-net-performance-on-3rd-gen-intel-xeon-instances.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/756595/intel-azure-proof-points-better-asp-net-performance-on-3rd-gen-intel-xeon-instances.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-asp.jpg?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-#### [Process up to 35% More MySQL New Orders per Minute on Microsoft Azure MVs Featuring 3rd Gen Intel Xeon Scalable Processors with 16 vCPUs](https://www.intel.com/content/www/us/en/content-details/754003/process-up-to-35-more-mysql-new-orders-per-minute-on-microsoft-azure-mvs-featuring-3rd-gen-intel-xeon-scalable-processors-with-16-vcpus.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/754003/process-up-to-35-more-mysql-new-orders-per-minute-on-microsoft-azure-mvs-featuring-3rd-gen-intel-xeon-scalable-processors-with-16-vcpus.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mysql.JPG?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-
-#### [Boost MariaDB Performance by up to 1.40x with Microsoft Azure Edsv5 Virtual Machines vs. EDSV4 VMs](https://www.intel.com/content/www/us/en/content-details/755218/boost-mariadb-performance-by-up-to-1-40x-with-microsoft-azure-edsv5-virtual-machines-vs-edsv4-vms.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/755218/boost-mariadb-performance-by-up-to-1-40x-with-microsoft-azure-edsv5-virtual-machines-vs-edsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mariadb.JPG?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-</center>
-
 
 ## Usage
 
 See examples folder for code ./examples/azure-windows-vm/main.tf
 
-Example of main.tf
+This examples shows how to use Intel OCM to deploy a Azure Windows VM in your exisiting network infrastructure
 
-```hcl
-# Example of how to pass variable for virtual machine password:
-# terraform apply -var="admin_password=..."
-# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+There are four required variables are necessary to deploy a Azure Windows VM
+```
+admin_password
+azurerm_resource_group
+azurerm_subnet_name
+azurerm_virtual_network_name
 ```
 # Provision Intel Cloud Optimization Module
+Variables.tf
 
-variables.tf
-```hcl
+ ```hcl
+ # THESE ARE REQUIRED VARIABLES THAT THE USERS NEED TO PROVIDE IN ORDER TO DELOY AN AZURE WINDOWS VM
+
 variable "admin_password" {
+  description = "The Password which should be used for the local-administrator on this virtual machine"
   type        = string
-  default     = null
   sensitive   = true
+  validation {
+    condition     = length(var.admin_password) >= 8
+    error_message = "The admin_password value must be at least 8 characters in length"
+  }
+}
+#During public preview you may need to speicfy zone due to availablity of TDX VMs in some zones only, currenlty default zone is 3 for eastus2 region
+variable "tdxzone" {
+  description = "Select the zone supporting Intel Confidential Compute VMs with TDX"
+  type        = number  
+  default     = 3
 }
 ```
 
 main.tf
 ```hcl
-
-module "azure-vm" {
-  source                = "intel/azure-linux-vm/intel"
-  azurerm_resource_group_name         = "example_resource_group"
-  virtual_network_resource_group_name = "vnet_example_resource_group"
-  azurerm_virtual_network_name        = "example_virtual_network_name"
-  azurerm_network_interface_name      = "example_network_interface"
-  admin_password                      = var.admin_password
-}
-
+module "azure-windows-vm" {
+  source                            = "intel/azure-windows-vm/intel"
+  admin_password                    = var.admin_password
+  azurerm_resource_group_name       = "terraform-testing-rg"
+  azurerm_subnet_name               = "tdxsubnet"
+  azurerm_virtual_network_name      = "tdxvnet"
+  #Set to flag below to use Intel Confidential VM with TDX
+  tdx_flag                            = true
+  secure_boot_flag                    = true
+  encryption_at_host_flag             = true
+  #During public preview you may need to speicfy zone due to availablity of TDX VMs in some zones only, currenlty default zone is 3 for useast3 region- see variables.tf
+  tdxzone_flag                        = true
+  #Choose the images supporting Intel Confidential Compute VMs with Intel TDX
+  virtual_machine_size              = "Standard_DC2es_v5"
+  source_image_reference_publisher  = "MicrosoftWindowsServer" 
+  source_image_reference_offer      = "WindowsServer"
+  source_image_reference_sku        = "2022-Datacenter-g2"
+  source_image_reference_version    = "latest"
+    tags = {
+    "owner"    = "user@company.com"
+    "duration" = "1"
+  }
+}   
 ```
 
 
@@ -134,12 +98,24 @@ terraform init
 terraform plan
 terraform apply
 ```
+```hcl
+# Example of how to pass variable for virtual machine password:
+# terraform apply -var="admin_password=..."
+# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+```
 
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
 
 ## Considerations  
-- Using HashiCorp Modules alongside green-blue deployment allows for a secure and efficient deployment process. The modules can be easily integrated into both the active and inactive environments, ensuring consistency across both environments.
-   - Instance - If you swap the instances terraform apply will shut down immediately, destroy and create a new instance which will incur service interruption.
+
+Intel Confidential VM with TDX is not yet supported in all Azure Regions and Availability Zones. Thus, please make sure to  check which regions are supoprted. By defualt this example uses Azure East US 2 region but you can change it in the variables.tf
+
+When admin_password is specified disable_password_authentication must be set to false
+
+Either admin_password or admin_ssh_key must be specified
+
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

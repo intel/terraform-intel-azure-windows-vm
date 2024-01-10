@@ -50,12 +50,19 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
 
   network_interface_ids = [azurerm_network_interface.nic.id]
 
+  #These next three parameters are required or TDX VMs
+  vtpm_enabled                    = var.tdx_flag == true ? true: null
+  encryption_at_host_enabled      = var.encryption_at_host_flag == true ? true: null 
+  secure_boot_enabled             = var.secure_boot_flag == true ? true: null
+  zone                            = var.tdxzone_flag == true ? var.tdxzone: null
   os_disk {
     name                      = var.os_disk_name
     caching                   = var.os_disk_caching
     storage_account_type      = var.os_disk_storage_account_type
     disk_size_gb              = var.disk_size_gb
     write_accelerator_enabled = var.write_accelerator_enabled
+    #This is required for TDX VM
+    security_encryption_type  =  var.tdx_flag == true ? "VMGuestStateOnly": null
   }
 
   source_image_reference {
