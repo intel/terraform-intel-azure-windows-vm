@@ -2,9 +2,9 @@
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform
+# Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## Terraform Intel Azure VM - Windows VM
 This example creates an Azure Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by default.  This module will create the Azure Resources needed to provision an instance. 
