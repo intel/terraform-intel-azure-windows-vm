@@ -14,7 +14,7 @@ module "azure-windows-vm" {
   admin_password               = var.admin_password
   azurerm_resource_group_name  = "terraform-testing-rg"
   azurerm_subnet_name          = "default"
-  azurerm_virtual_network_name = "vnet01"
+  azurerm_virtual_network_name = "vm-vnet1"
   
   # ICO by Densify normal way of sizing an instance by hardcoding the size.
   #virtual_machine_size = "Standard_D4ds_v4"

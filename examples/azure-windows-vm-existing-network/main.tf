@@ -8,7 +8,7 @@ module "azure-windows-vm" {
   azurerm_subnet_name          = "dbx-public"
   azurerm_virtual_network_name = "mssql_vnet_test"
   tags = {
-    owner    = "owner_josh",
+    owner    = "owner_name",
     duration = "5"
   }
 }
