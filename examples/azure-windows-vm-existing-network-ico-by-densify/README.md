@@ -11,7 +11,7 @@
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ico.png?raw=true" alt="Intel + Densify Logo" width="250"/>
 </p>
 
-This example creates an Azure  Virtual Machine on Intel Icelake CPU on Windows Operating System. The virtual machine is created on an Intel Icelake Standard_D2_v5 by as ea example recommendaiton by Intel Cloud Optimzer (ICO) by Densify.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Densify.
+This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids  Standard_D2s_v6 by default as an example recommendaiton by Intel Cloud Optimzer (ICO) by Densify.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Densify.
 
 Intel® Cloud Optimizer is a collaboration between Densify and Intel targeted at getting you the most from your cloud investment. 
 
@@ -66,7 +66,7 @@ variable "densify_recommendations" {
   #To see how it would work you can change the approvalType from all to na. As all assumes you have approved all changes and na would be used to say haven't approved the change and just want to make the system self-aware. 
   default = { 
     test = {
-      recommendedType = "Standard_D4ds_v5"
+      recommendedType = "Standard_D4ds_v6"
       currentType = "Standard_D4ds_v2"
       approvalType = "all"
       savingsEstimate = "31.43"
@@ -81,7 +81,7 @@ variable "densify_recommendations" {
 variable "densify_fallback"{
   type = map(string)
   default = {
-      	recommendedType = "Standard_D4ds_v5"
+      	recommendedType = "Standard_D4ds_v6"
      	currentType = "Standard_D4ds_v2"
 	approvalType = "all"
 	savingsEstimate = "0"

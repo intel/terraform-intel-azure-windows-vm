@@ -11,9 +11,9 @@
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel Icelake CPU (for Intel Non-TDX VMs) and Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX) on Windows Operating System. 
+This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids (for Intel Non-TDX VMs) and Intel® 4th Generation Xeon® Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX) on Windows Operating System.
 
-The virtual machine is created on an Intel Icelake Standard_D2_v5 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5.
+The virtual machine is created on an Intel Emerald Rapids (EMR) Standard_D2_v6 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5 (EMR not yet available with TDX in Azure).
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. 
 
@@ -30,6 +30,7 @@ We have now included example for provisioning Intel Confidential VMs with TDX- s
 #### Find all the information below plus even more by navigating our full library
 #### [INTEL CLOUD PERFORMANCE DATA LIBRARY for Azure](https://www.intel.com/content/www/us/en/developer/topic-technology/cloud/library.html?q=azure&s=Relevancy)
 
+**NOTE: Intel Emerald Rapids (Intel 5th Generation Scalable Processor) Performance Data for Azure is not yet available and will be coming soon.**
 #
 
 #### [Handle up to 1.53x as Many WordPress Users on Microsoft® Azure®  Ddsv5 Virtual Machines as on Ddsv4 VMs](https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html)

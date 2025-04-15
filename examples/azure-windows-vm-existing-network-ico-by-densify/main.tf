@@ -17,7 +17,7 @@ module "azure-windows-vm" {
   azurerm_virtual_network_name = "vm-vnet1"
   
   # ICO by Densify normal way of sizing an instance by hardcoding the size.
-  #virtual_machine_size = "Standard_D4ds_v4"
+  #virtual_machine_size = "Standard_D4ds_v6"
 
   # ICO by Densify new self-optimizing instance type from Densify
   virtual_machine_size = module.densify.instance_type
