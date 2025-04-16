@@ -23,7 +23,7 @@ module "azure-windows-vm" {
   virtual_machine_size = module.densify.instance_type
   
   tags = {
-    owner    = "user@company.com",
+    owner    = "youremail@company.com",
     duration = "1"
     # ICO by Densify tag instance to make it Self-Aware these tags are optional and can set as few or as many as you like.
     Name = var.name
