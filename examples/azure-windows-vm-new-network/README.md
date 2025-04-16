@@ -11,7 +11,7 @@
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids  Standard_D2s_v6 by default.  This module will create the Azure Resources needed to provision an instance. 
+This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids  Standard_D2s_v6 by default using "2022-Datacenter-g2" # Generation 2 SKU.  This module will create the Azure Resources needed to provision an instance. 
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a **newly configured network interface, subnet, and resource group** and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
 

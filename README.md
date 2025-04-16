@@ -11,7 +11,7 @@
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids (for Intel Non-TDX VMs) and Intel® 4th Generation Xeon® Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX) on Windows Operating System.
+This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids (for Intel Non-TDX VMs) and Intel® 4th Generation Xeon® Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX)  using "2022-Datacenter-g2" # Generation 2 SKU Windows Operating System.
 
 The virtual machine is created on an Intel Emerald Rapids (EMR) Standard_D2_v6 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5 (EMR not yet available with TDX in Azure).
 
