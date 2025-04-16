@@ -82,8 +82,8 @@ module "azure-windows-vm" {
   source                            = "intel/azure-windows-vm/intel"
   admin_password                    = var.admin_password
   azurerm_resource_group_name       = "terraform-testing-rg"
-  azurerm_subnet_name               = "tdxsubnet"
-  azurerm_virtual_network_name      = "tdxvnet"
+  azurerm_subnet_name               = "default"
+  azurerm_virtual_network_name      = "vm-vnet1"
   #Set to flag below to use Intel Confidential VM with TDX
   tdx_flag                            = true
   secure_boot_flag                    = true
@@ -97,7 +97,7 @@ module "azure-windows-vm" {
   source_image_reference_sku        = "2022-Datacenter-g2"
   source_image_reference_version    = "latest"
     tags = {
-    "owner"    = "user@company.com"
+    "owner"    = "youremail@company.com"
     "duration" = "1"
   }
 }   

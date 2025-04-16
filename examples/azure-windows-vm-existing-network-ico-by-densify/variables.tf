@@ -23,7 +23,7 @@ variable "densify_recommendations" {
   #To see how it would work you can change the approvalType from all to na. As all assumes you have approved all changes and na would be used to say haven't approved the change and just want to make the system self-aware. 
   default = { 
     test = {
-      recommendedType = "Standard_D4ds_v5"
+      recommendedType = "Standard_D4ds_v6"
       currentType = "Standard_D4ds_v2"
       approvalType = "all"
       savingsEstimate = "31.43"
@@ -38,7 +38,7 @@ variable "densify_recommendations" {
 variable "densify_fallback"{
   type = map(string)
   default = {
-      	recommendedType = "Standard_D4ds_v5"
+      	recommendedType = "Standard_D4ds_v6"
      	currentType = "Standard_D4ds_v2"
 	approvalType = "all"
 	savingsEstimate = "0"

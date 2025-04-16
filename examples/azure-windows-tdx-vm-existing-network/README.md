@@ -7,7 +7,8 @@
 © Copyright 2024, Intel Corporation
 
 ## Terraform Intel Azure Windows TDX VM
-This example creates an Azure Virtual Machine on Intel® 4th Generation Xeon® Scalable Sapphire Rapids, processors featuring Intel Trusted Domain Extensions (TDX) on Windows VM. Thse TDX Intel Confidential Computing VMs are hardned from the cloud virtualized environment by denying the hypervisor, other host management code and administrators access to the VM memory and state. 
+This example creates an Azure Virtual Machine on Intel® 4th Generation Xeon® Scalable Sapphire Rapids, processors featuring Intel Trusted Domain Extensions (TDX) using "2022-Datacenter-g2" # Generation 2 SKU on Windows VM. Thse TDX Intel Confidential Computing VMs are hardned from the cloud virtualized environment by denying the hypervisor, other host management code and administrators access to the VM memory and state. 
+
 The virtual machine is created on Intel Sapphire Rapids Standard_DC2es_v5 by default.
 
 

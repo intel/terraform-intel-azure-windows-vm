@@ -17,13 +17,13 @@ module "azure-windows-vm" {
   azurerm_virtual_network_name = "vm-vnet1"
   
   # ICO by Densify normal way of sizing an instance by hardcoding the size.
-  #virtual_machine_size = "Standard_D4ds_v4"
+  #virtual_machine_size = "Standard_D4ds_v6"
 
   # ICO by Densify new self-optimizing instance type from Densify
   virtual_machine_size = module.densify.instance_type
   
   tags = {
-    owner    = "user@company.com",
+    owner    = "youremail@company.com",
     duration = "1"
     # ICO by Densify tag instance to make it Self-Aware these tags are optional and can set as few or as many as you like.
     Name = var.name

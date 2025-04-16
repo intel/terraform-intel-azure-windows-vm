@@ -7,6 +7,10 @@ locals {
 resource "azurerm_resource_group" "example" {
   name     = local.resource_group_name
   location = local.location
+ tags = {
+    owner    = "youremail@company.com",
+    duration = "5"
+}
 }
 
 resource "azurerm_virtual_network" "example" {
@@ -43,7 +47,7 @@ module "azure-windows-vm" {
   azurerm_subnet_name          = azurerm_subnet.example.name
   azurerm_virtual_network_name = azurerm_virtual_network.example.name
   tags = {
-    owner    = "owner_name",
+    owner    = "youremail@company.com",
     duration = "5"
   }
   depends_on = [azurerm_resource_group.example]
