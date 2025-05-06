@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## Terraform Intel Azure VM - Windows VM
 This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids Standard_D2s_v6 by default using "2022-Datacenter-g2" # Generation 2 SKU.  This module will create the Azure Resources needed to provision an instance. 

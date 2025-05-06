@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## Azure Windows Virtual Machine
 
@@ -220,4 +220,7 @@ No modules.
 | <a name="output_storage_account_tier"></a> [storage\_account\_tier](#output\_storage\_account\_tier) | Tier to identify the storage account associated with the virtual machine |
 | <a name="output_tags"></a> [tags](#output\_tags) | Tags that are assigned to the virtual machine |
 | <a name="output_virtual_machine_id"></a> [virtual\_machine\_id](#output\_virtual\_machine\_id) | ID assigned to the virtual machine after it has been created |
+
+## Links
+https://azure.microsoft.com/en-us/products/virtual-machines/linux/
 <!-- END_TF_DOCS -->
