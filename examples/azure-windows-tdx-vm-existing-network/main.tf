@@ -91,7 +91,7 @@ module "azure-windows-vm" {
   #During public preview you may need to speicfy zone due to availablity of TDX VMs in some zones only, currenlty default zone is 3 for eastus2 region- see variables.tf
   tdxzone_flag                        = true
   #Choose the images supporting Intel Confidential Compute VMs with Intel TDX
-  virtual_machine_size              = "Standard_DC2es_v5"
+  virtual_machine_size              = "Standard_DC2es_v6"
   source_image_reference_publisher  = "MicrosoftWindowsServer" 
   source_image_reference_offer      = "WindowsServer"
   source_image_reference_sku        = "2022-Datacenter-g2"

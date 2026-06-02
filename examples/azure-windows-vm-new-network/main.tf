@@ -1,6 +1,6 @@
 locals {
   resource_group_name = "resource-group-test"
-  location            = "West US 2"
+  location            = "Central US"
   prefix              = "test-1"
 }
 

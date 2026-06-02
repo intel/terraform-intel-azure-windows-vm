@@ -1,7 +1,7 @@
-densify_recommendations = {
+Kubex_recommendations = {
   "ico-test" = {
-    currentType          = "Standard_D2ds_v2"
-    recommendedType      = "Standard_D2ds_v6"
+    currentType          = "Standard_D2ds_v3"
+    recommendedType      = "Standard_D2ds_v7"
     approvalType         = "na"
     predictedUptime      = "84.38"
     recommendationType   = "Modernize - Optimal Family"
@@ -9,7 +9,7 @@ densify_recommendations = {
     implementationMethod = "Self Optimization"
     savingsEstimate      = "49.277912"
     effortEstimate       = "Low"
-    densifyPolicy        = "Azure (Mobile_prod)"
+    KubexPolicy        = "Azure (Mobile_prod)"
   }
   "st01-dev-imco-321" = {
     currentType          = "basic_a3"
@@ -21,7 +21,7 @@ densify_recommendations = {
     implementationMethod = "Self Optimization"
     savingsEstimate      = "49.277912"
     effortEstimate       = "Low"
-    densifyPolicy        = "Azure (Mobile_prod)"
+    KubexPolicy        = "Azure (Mobile_prod)"
   }
   "st01-dev-kotl-413" = {
     currentType          = "standard_d2_v2"
@@ -33,7 +33,7 @@ densify_recommendations = {
     implementationMethod = "Self Optimization"
     savingsEstimate      = "5.1795063"
     effortEstimate       = "Low"
-    densifyPolicy        = "Azure (Mobile_prod)"
+    KubexPolicy        = "Azure (Mobile_prod)"
   }
   "st01-prepro-duct-323" = {
     currentType          = "standard_a1_v2"
@@ -45,6 +45,6 @@ densify_recommendations = {
     implementationMethod = "Self Optimization"
     savingsEstimate      = "1.0199986"
     effortEstimate       = "Low"
-    densifyPolicy        = "Azure (Mobile_prod)"
+    KubexPolicy        = "Azure (Mobile_prod)"
   }
 }
