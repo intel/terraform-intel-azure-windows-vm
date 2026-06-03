@@ -4,14 +4,14 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2025, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## Terraform Intel Azure VM - Windows VM using Intel Cloud Optimzier(ICO) by Kubex recommendations
 <p align="center">
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ico.png?raw=true" alt="Intel + Kubex Logo" width="250"/>
 </p>
 
-This example creates an Azure Virtual Machine on Intel® 6th Generation Xeon® Scalable Granite Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids Standard_D2s_v6 by default using "2022-Datacenter-g2" # Generation 2 SKU as an example recommendaiton by Intel Cloud Optimzer (ICO) by Kubex.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Kubex.
+This example creates an Azure Virtual Machine on Intel® 6th Generation Xeon® Scalable Granite Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids Standard_D2s_v7 by default using "2022-Datacenter-g2" # Generation 2 SKU as an example recommendaiton by Intel Cloud Optimzer (ICO) by Kubex.  This module will create the Azure Resources needed to provision an instance using an example of recommendation by ICO by Kubex.
 
 Intel® Cloud Optimizer is a collaboration between Kubex and Intel targeted at getting you the most from your cloud investment. 
 
@@ -66,8 +66,8 @@ variable "Kubex_recommendations" {
   #To see how it would work you can change the approvalType from all to na. As all assumes you have approved all changes and na would be used to say haven't approved the change and just want to make the system self-aware. 
   default = { 
     test = {
-      recommendedType = "Standard_D4ds_v6"
-      currentType = "Standard_D4ds_v2"
+      recommendedType = "Standard_D2ds_v7"
+      currentType = "Standard_D2ds_v3"
       approvalType = "all"
       savingsEstimate = "31.43"
       predictedUptime = "83.4"
@@ -81,8 +81,8 @@ variable "Kubex_recommendations" {
 variable "Kubex_fallback"{
   type = map(string)
   default = {
-      	recommendedType = "Standard_D4ds_v6"
-     	currentType = "Standard_D4ds_v2"
+      	recommendedType = "Standard_D2ds_v7"
+     	currentType = "Standard_D2ds_v3"
 	approvalType = "all"
 	savingsEstimate = "0"
 	predictedUptime = "0"
@@ -108,7 +108,7 @@ module "azure-windows-vm" {
   azurerm_virtual_network_name = "vnet01"
   
   # ICO by Kubex normal way of sizing an instance by hardcoding the size.
-  virtual_machine_size = "Standard_D4ds_v4"
+  virtual_machine_size = "Standard_D4ds_v7"
 
   # ICO by Kubex new self-optimizing instance type from Kubex
   virtual_machine_size = module.Kubex.instance_type

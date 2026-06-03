@@ -23,8 +23,8 @@ variable "Kubex_recommendations" {
   #To see how it would work you can change the approvalType from all to na. As all assumes you have approved all changes and na would be used to say haven't approved the change and just want to make the system self-aware. 
   default = { 
     test = {
-      recommendedType = "Standard_D4ds_v7"
-      currentType = "Standard_D4ds_v3"
+      recommendedType = "Standard_D2ds_v7"
+      currentType = "Standard_D2ds_v3"
       approvalType = "all"
       savingsEstimate = "31.43"
       predictedUptime = "83.4"
@@ -38,8 +38,8 @@ variable "Kubex_recommendations" {
 variable "Kubex_fallback"{
   type = map(string)
   default = {
-      	recommendedType = "Standard_D4ds_v7"
-     	currentType = "Standard_D4ds_v3"
+      	recommendedType = "Standard_D2ds_v7"
+     	currentType = "Standard_D2ds_v3"
 	approvalType = "all"
 	savingsEstimate = "0"
 	predictedUptime = "0"

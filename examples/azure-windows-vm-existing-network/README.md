@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2025, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## Terraform Intel Azure VM - Windows VM
 This example creates an Azure Virtual Machine on Intel® 6th Generation Xeon® Scalable Granite Rapids using "2022-Datacenter-g2" # Generation 2 SKU Windows Operating System.

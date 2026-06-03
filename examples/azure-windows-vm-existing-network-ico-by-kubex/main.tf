@@ -1,5 +1,4 @@
 ###  required, resource group, subnet_name, virtual_network_name
-// TODO - update required section with reference to terraform.tfvars file for the 3 fields needed. 
 
 # Initialize Kubex Module that will parse the Kubex_recommendations.auto.tfvars recommendation file
 module "Kubex" {
@@ -17,7 +16,7 @@ module "azure-windows-vm" {
   azurerm_virtual_network_name = "vm-vnet1"
   
   # ICO by Kubex normal way of sizing an instance by hardcoding the size.
-  #virtual_machine_size = "Standard_D4ds_v6"
+  #virtual_machine_size = "Standard_D2ds_v7"
 
   # ICO by Kubex new self-optimizing instance type from Kubex
   virtual_machine_size = module.Kubex.instance_type

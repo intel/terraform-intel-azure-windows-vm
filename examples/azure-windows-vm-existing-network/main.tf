@@ -1,5 +1,4 @@
 ###  required, resource group, subnet_name, virtual_network_name
-// TODO - update required section with reference to terraform.tfvars file for the 3 fields needed. 
 
 module "azure-windows-vm" {
   source                       = "intel/azure-windows-vm/intel"

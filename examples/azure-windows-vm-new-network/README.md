@@ -1,10 +1,12 @@
 <p align="center">
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-intel-cloud-optimizer-by-kubex.png?raw=true" alt="Intel Cloud Optimizer by Kubex Logo" width="250"/>
 </p>
+
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## Azure Windows Virtual Machine
 
