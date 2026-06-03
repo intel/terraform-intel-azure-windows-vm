@@ -2,18 +2,25 @@
 ####     Intel      ####
 ########################
 
-# See policies.md, we recommend  Intel Xeon 3rd Generation Scalable processors (code-named Ice Lake)
-# General Purpose: Standard_D2s_v6, Standard_D4s_v6, Standard_D8s_v6, Standard_D16s_v6, Standard_D32s_v6, Standard_D48s_v6, Standard_D64s_v6, Standard_D96s_v6, Standard_D128s_v6, Standard_D2ds_v6, Standard_D4ds_v6, Standard_D8ds_v6, Standard_D16ds_v6, Standard_D32ds_v6, Standard_D48ds_v6, Standard_D64ds_v6, Standard_D96ds_v6, Standard_D128ds_v6, 
-# General Purpose TDX VM: Standard_DC2s_v3, Standard_DC4s_v3, Standard_DC8s_v3, Standard_DC16s_v3, Standard_DC24s_v3, Standard_DC32s_v3, Standard_DC48s_v3, Standard_DC1ds_v3, Standard_DC2ds_v3, Standard_DC4ds_v3, Standard_DC8ds_v3, Standard_DC16ds_v3, Standard_DC24ds_v3, Standard_DC32ds_v3, Standard_DC48ds_v3
-# Memory Optimized: Standard_E2s_v6, Standard_E4s_v6, Standard_E8s_v6, Standard_E16s_v6, Standard_E32s_v6, Standard_E48s_v6, Standard_E64s_v6, Standard_E96s_v6, Standard_E128s_v6, Standard_E2ds_v6, Standard_E4ds_v6, Standard_E8ds_v6, Standard_E16ds_v6, Standard_E32ds_v6, Standard_E48ds_v6, Standard_E64ds_v6, Standard_E128_6
+# See policies.md, we recommend  Intel Xeon 6th Generation Scalable processors (code-named Granite Rapids)
+# Currently, D/Ev7 with recommended Intel Granite Rapids (GNR) is aviable only in Central US region. Check availablity for other regions here: https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/ and filter by "6th Gen Intel Xeon Scalable processors (Granite Rapids)"
+# General Purpose: Standard_D2s_v7, Standard_D4s_v7, Standard_D8s_v7, Standard_D16s_v7, Standard_D32s_v7, Standard_D48s_v7, Standard_D64s_v7, Standard_D96s_v7, Standard_D128s_v7, Standard_D2ds_v7, Standard_D4ds_v7, Standard_D8ds_v7, Standard_D16ds_v7, Standard_D32ds_v7, Standard_D48ds_v7, Standard_D64ds_v7, Standard_D96ds_v7, Standard_D128ds_v7, 
+# Memory Optimized: Standard_E2s_v7, Standard_E4s_v7, Standard_E8s_v7, Standard_E16s_v7, Standard_E32s_v7, Standard_E48s_v7, Standard_E64s_v7, Standard_E96s_v7, Standard_E128s_v7, Standard_E2ds_v7, Standard_E4ds_v7, Standard_E8ds_v7, Standard_E16ds_v7, Standard_E32ds_v7, Standard_E48ds_v7, Standard_E64ds_v7, Standard_E128ds_v7
+# General Purpose Confidential VM with Intel TDX: Standard_DC2s_v6, Standard_DC4s_v6, Standard_DC8s_v6, Standard_DC16s_v6, Standard_DC24s_v6, Standard_DC32s_v6, Standard_DC48s_v6, Standard_DC1ds_v6, Standard_DC2ds_v6, Standard_DC4ds_v6, Standard_DC8ds_v6, Standard_DC16ds_v6, Standard_DC24ds_v6, Standard_DC32ds_v6, Standard_DC48ds_v6
+
 # See more:
-# https://learn.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series
-# https://learn.microsoft.com/en-us/azure/virtual-machines/ev5-esv5-series
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dsv7-series?tabs=sizebasic
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dlsv7-series?tabs=sizebasic
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dldsv7-series?tabs=sizebasic
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/ddsv7-series?tabs=sizebasic
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dsv7-series?tabs=sizebasic
+# https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dcesv6-series?tabs=sizebasic
+
 
 variable "virtual_machine_size" {
   description = "The SKU that will be configured for the provisioned virtual machine"
   type        = string
-  default     = "Standard_D2s_v6"
+  default     = "Standard_D2ds_v7"
 }
 
 ########################

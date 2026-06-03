@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform  
 
-© Copyright 2025, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## HashiCorp Sentinel Policies
 

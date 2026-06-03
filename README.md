@@ -4,16 +4,16 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2025, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## Azure Windows Virtual Machine
 
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids (for Intel Non-TDX VMs) and Intel® 4th Generation Xeon® Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX)  using "2022-Datacenter-g2" # Generation 2 SKU Windows Operating System.
+This example creates an Azure Virtual Machine on Intel® 6th Generation Xeon® Scalable Granite Rapids (for Intel Non-TDX VMs) and Intel® 4th Generation Xeon® Sapphire Rapids CPUs (for Intel Confidential Compute VMs with Intel TDX)  using "2022-Datacenter-g2" # Generation 2 SKU Windows Operating System.
 
-The virtual machine is created on an Intel Emerald Rapids (EMR) Standard_D2_v6 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v5 (EMR not yet available with TDX in Azure).
+The virtual machine is created on an Intel Granite Rapids (GNR) Standard_D2ds_v7 by default and if using Intel Confidential Computing VMs with Intel TDX the default will be Intel Sapphire Rapids Standard_DC2es_v6 (Intel 5th Generation with Emerald Rapids, EMR).
 
 As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. 
 
@@ -33,59 +33,13 @@ We have now included example for provisioning Intel Confidential VMs with TDX- s
 **NOTE: Intel Emerald Rapids (Intel 5th Generation Scalable Processor) Performance Data for Azure is not yet available and will be coming soon.**
 #
 
-#### [Handle up to 1.53x as Many WordPress Users on Microsoft® Azure®  Ddsv5 Virtual Machines as on Ddsv4 VMs](https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html)
+#### [Handle up to 30% better database perfomranace (Redis) on new Intel 6th Generation Granite Rapids based Azure Dsv7 instances vs previous generation Dsv6 Emerald Rapids instances.](https://techcommunity.microsoft.com/blog/azurecompute/announcing-general-availability-of-azure-dldesv7-series-vms-based-on-intel%C2%AE-xeon/4516907)
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/content-details/767772/handle-up-to-1-53x-as-many-wordpress-users-on-microsoft-azure-ddsv5-virtual-machines-as-on-ddsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-wordpress.JPG?raw=true" alt="Link" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-dv7.JPG?raw=true" alt="Link" width="600"/>
   </a>
 </p>
-
-
-#
-
-#### [To Complete Artificial Intelligence Workloads Faster, Choose Microsoft Azure Edsv5-Series VMs Featuring 3rd Gen Intel® Xeon® Scalable Processors](https://www.intel.com/content/www/us/en/content-details/780282/to-complete-artificial-intelligence-workloads-faster-choose-microsoft-azure-edsv5-series-vms-featuring-3rd-gen-intel-xeon-scalable-processors.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/780282/to-complete-artificial-intelligence-workloads-faster-choose-microsoft-azure-edsv5-series-vms-featuring-3rd-gen-intel-xeon-scalable-processors.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-ai.jpg?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-#### [Handle up to 69 Percent More ASP.NET Work on Microsoft® Azure® Dsv5 Virtual Machines Featuring 3rd Gen Intel®  Xeon® Scalable Processors](https://www.intel.com/content/www/us/en/content-details/756595/intel-azure-proof-points-better-asp-net-performance-on-3rd-gen-intel-xeon-instances.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/756595/intel-azure-proof-points-better-asp-net-performance-on-3rd-gen-intel-xeon-instances.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-asp.jpg?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-#### [Process up to 35% More MySQL New Orders per Minute on Microsoft Azure MVs Featuring 3rd Gen Intel Xeon Scalable Processors with 16 vCPUs](https://www.intel.com/content/www/us/en/content-details/754003/process-up-to-35-more-mysql-new-orders-per-minute-on-microsoft-azure-mvs-featuring-3rd-gen-intel-xeon-scalable-processors-with-16-vcpus.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/754003/process-up-to-35-more-mysql-new-orders-per-minute-on-microsoft-azure-mvs-featuring-3rd-gen-intel-xeon-scalable-processors-with-16-vcpus.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mysql.JPG?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
-
-#
-
-
-#### [Boost MariaDB Performance by up to 1.40x with Microsoft Azure Edsv5 Virtual Machines vs. EDSV4 VMs](https://www.intel.com/content/www/us/en/content-details/755218/boost-mariadb-performance-by-up-to-1-40x-with-microsoft-azure-edsv5-virtual-machines-vs-edsv4-vms.html)
-
-<p align="center">
-  <a href="https://www.intel.com/content/www/us/en/content-details/755218/boost-mariadb-performance-by-up-to-1-40x-with-microsoft-azure-edsv5-virtual-machines-vs-edsv4-vms.html">
-  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/azure-vm-mariadb.JPG?raw=true" alt="Link" width="600"/>
-  </a>
-</p>
-
 
 #
 </center>

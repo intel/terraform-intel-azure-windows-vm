@@ -1,19 +1,25 @@
 <p align="center">
   <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
+  <img src="https://github.com/intel/terraform-intel-azure-windows-vm/blob/main/images/logo-intel-cloud-optimizer-by-kubex.png?raw=true" alt="Intel Cloud Optimizer by Kubex Logo" width="250"/>
 </p>
+
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2025, Intel Corporation
+© Copyright 2026, Intel Corporation
 
 ## Azure Windows Virtual Machine
 
 Azure Windows Virtual Machine
 
 ## Terraform Intel Azure VM - Windows VM
-This example creates an Azure Virtual Machine on Intel® 5th Generation Xeon® Scalable Emerald Rapids on Windows Operating System. The virtual machine is created on an Intel Emerald Rapids  Standard_D2s_v6 by default using "2022-Datacenter-g2" # Generation 2 SKU.  This module will create the Azure Resources needed to provision an instance. 
+This example creates an Azure Virtual Machine on Intel® 6th Generation Xeon® Scalable Granite Rapids  using "2022-Datacenter-g2" # Generation 2 SKU Windows Operating System.
 
-As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. In this example, the virtual machine is using a **newly configured network interface, subnet, and resource group** and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
+The virtual machine is created on an Intel Granite Rapids (GNR) Standard_D2ds_v7 by default.
+
+As you configure your application's environment, choose the configurations for your infrastructure that matches your application's requirements. 
+
+In this example, the virtual machine is using a **newly configured network interface, subnet, and resource group** and has an additional option to enable boot diagnostics. The tags Name, Owner and Duration are added to the virtual machine when it is created.
 
 ## Usage
 
@@ -41,7 +47,7 @@ main.tf
 ```hcl
 locals{
   resource_group_name = "resource-group-test"
-  location            = "West US 2"
+  location            = "Central US"
 }
 
 # Creation of Azure Resource Group, network interface, subnet
